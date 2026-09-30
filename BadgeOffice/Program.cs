@@ -1,0 +1,36 @@
+﻿Console.Write("What is your name?");
+string fullName = Console.ReadLine();
+fullName = fullName.Trim();
+fullName = fullName.ToUpper();
+int spacePosition = fullName.IndexOf(" ");
+string firstName = fullName.Substring(0, spacePosition);
+string lastName = fullName.Substring(spacePosition + 1);
+string username = firstName.Substring(0, 1) + lastName;
+string lowerUsername = username.ToLower();
+string firstInitials = firstName.Substring(0, 1);
+string lastInitials = lastName.Substring(0, 1);
+int lastNameLength = lastName.Length;
+Console.WriteLine($"Name on badge: {firstName} {lastName}");
+Console.WriteLine($"Username: {lowerUsername}");
+Console.WriteLine($"Initials: {firstInitials}.{lastInitials}.");
+Console.WriteLine($"Letters in last name: {lastNameLength}");
+
+Random rng = new Random();
+int studentID = rng .Next(100000, 1000000);
+int lockerNumber = rng.Next(1, 501);
+Console.WriteLine($"Student ID: {studentID}");
+Console.WriteLine($"Locker Number: {lockerNumber}");
+
+Console.Write("What is the dorm's x coordinate?");
+double dormX = Convert.ToDouble(Console.ReadLine());
+Console.Write("What is the dorm's y coordinate?");
+double dormY = Convert.ToDouble(Console.ReadLine());
+Console.Write("What is the classroom's x coordinate?");
+double classX = Convert.ToDouble(Console.ReadLine());
+Console.Write("What is the classroom's y coordinate?");
+double classY = Convert.ToDouble(Console.ReadLine());
+Console.Write("What is your walking speed in feet per second?");
+double walkingSpeed = Convert.ToDouble(Console.ReadLine);
+double distance = Math.Sqrt(Math.Pow(classX - dormX, 2) + Math.Pow(classY - dormY, 2));
+double tripInSeconds = distance / walkingSpeed;
+double tripInWholeSeconds = Math.Round(tripInSeconds, 0);
