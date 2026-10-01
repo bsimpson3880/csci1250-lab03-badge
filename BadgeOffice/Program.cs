@@ -46,16 +46,8 @@ System.Console.WriteLine($"Estimated walking time: {minutes} minutes and {second
 
 // the badge
 
-Console.WriteLine("==================================");
-Console.WriteLine("        ETSU STUDENT BADGE        ");
-Console.WriteLine("==================================");
-System.Console.WriteLine("NAME " + fullName.ToString().PadLeft(17));
-System.Console.WriteLine("USERNAME" + lowerUsername.ToString().PadLeft(11));
+
 double iD = studentID % 9;
-System.Console.WriteLine("ID" + studentID.ToString().PadLeft(14) + "-" + iD.ToString());
-System.Console.WriteLine("LOCKER" + lockerNumber.ToString().PadLeft(7));
-System.Console.WriteLine($"WALK" + $"{minutes} min" .PadLeft(11) + $"{seconds} sec" .PadLeft(8));
-Console.WriteLine("==================================");
 
 Console.WriteLine("FULL RECEIPT");
 Console.WriteLine("Full Name: " + fullName);
@@ -79,9 +71,9 @@ Console.WriteLine("");
 Console.WriteLine("==================================");
 Console.WriteLine("        ETSU STUDENT BADGE        ");
 Console.WriteLine("==================================");
-System.Console.WriteLine("NAME " + fullName.ToString().PadLeft(17));
-System.Console.WriteLine("USERNAME" + lowerUsername.ToString().PadLeft(11));
-System.Console.WriteLine("ID" + studentID.ToString().PadLeft(14) + "-" + iD.ToString());
-System.Console.WriteLine("LOCKER" + lockerNumber.ToString().PadLeft(7));
-System.Console.WriteLine($"WALK" + $"{minutes} min" .PadLeft(11) + $"{seconds} sec" .PadLeft(8));
+System.Console.WriteLine("NAME".PadRight(10) + fullName);
+System.Console.WriteLine("USERNAME".PadRight(10) + lowerUsername);
+System.Console.WriteLine("ID".PadRight(10) + studentID + "-" + iD);
+System.Console.WriteLine("LOCKER".PadRight(10) + lockerNumber);
+System.Console.WriteLine($"WALK".PadRight(10) + $"{minutes} min"  + $"{seconds} sec" );
 Console.WriteLine("==================================");
